@@ -2,9 +2,9 @@ import functools
 import sys
 import time
 
-from typing import Optional, TextIO
+from typing import Callable, Optional, TextIO
 
-import ansicolors
+import colors
 import shortuuid
 
 
@@ -15,24 +15,27 @@ class SmallTimer:
         self.target = target
 
     def start(self) -> "SmallTimer":
-        print(ansicolors.color(f"Starting counter ({self.name})", fg="white", bg="red"))
+        print(colors.color(f"Starting counter ({self.name})", fg="white", bg="red"))
         self.stored_time = time.perf_counter_ns()
         return self
 
     def stop(self) -> int:
         if not self.stored_time:
             raise RuntimeError("Timers must be started before they can be stopped.")
-        time_delta_ns = self.stored_time - time.perf_counter_ns()
-        print(ansicolors.color(f"Counter stopped ({self.name}): {time_delta_ns}ns elapsed", fg="white", bg="red"))
+        time_delta_ns = time.perf_counter_ns() - self.stored_time
+        print(colors.color(f"Counter stopped ({self.name}): {time_delta_ns}ns elapsed", fg="white", bg="red"))
         self.stored_time = None
         return time_delta_ns
 
 
-def timed(timer_id: str):
-    def decorator_timed(func):
+def timed(name: Optional[str] = None, target: Optional[str] = None):
+    def decorator_timed(func: Callable):
         @functools.wraps(func)
         def wrapper_timed(*args, **kwargs):
-            timer = SmallTimer(name=timer_id)
+            timer = SmallTimer(
+                name=name or func.__name__,
+                target=target if target else sys.stdout
+            )
             timer.start()
             func(*args, **kwargs)
             timer.stop()
