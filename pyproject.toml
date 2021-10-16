@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "smalltime"
+version = "0.0.1"
+description = "A small python timing package for a packaging demonstration"
+authors = ["nicklambourne <dev@ndl.im>"]
+license = "BSD 3-Clause"
+
+[tool.poetry.dependencies]
+python = "^3.6.2"
+ansicolors = "^1.1.8"
+shortuuid = "^1.0.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+black = "^21.9b0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+st = 'smalltime.cli:run'
