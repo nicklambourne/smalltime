@@ -38,3 +38,6 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 st = 'smalltime.cli:main'
+
+[tool.poetry.extras]
+docs = ["sphinx"]
