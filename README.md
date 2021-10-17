@@ -4,7 +4,7 @@
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/smalltime)
 ![PyPI](https://img.shields.io/pypi/v/smalltime)
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/smalltime)
-[![Coverage Status](https://coveralls.io/repos/github/nicklambourne/slackblocks/badge.svg?branch=master)](https://coveralls.io/github/nicklambourne/smalltime?branch=master)
+[![codecov](https://codecov.io/gh/nicklambourne/smalltime/branch/master/graph/badge.svg?token=QBZ9WK9PFA)](https://codecov.io/gh/nicklambourne/smalltime)
 <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
 
 <p align="center">
@@ -12,6 +12,7 @@
 </p>
 
 ## What is it?
+`smalltime` is a quick and dirty library for timing Python function, sections of code and arbitrary programs on the command line.
 
 ## Requirements
 `smalltime` requires Python >= 3.6.2.
@@ -64,3 +65,6 @@ st sleep 10
 Starting counter (BNM8rBqP)
 Counter stopped (BNM8rBqP): 10007777130ns elapsed
 ```
+
+## Can I use this in my project?
+Yes, please do! The code is all open source and BSD-3-Clause licensed.
