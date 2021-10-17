@@ -27,7 +27,7 @@ jobs:
     - name: Run Tests
       run: poetry run pytest
     - name: Run Coverage
-      run: coverage run --source=smalltime -m pytest tests/
+      run: poetry run coverage run --source=smalltime -m pytest tests/
     - name: Publish Coverage
       uses: coverallsapp/github-action@master
       with:
