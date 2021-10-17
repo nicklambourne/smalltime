@@ -11,7 +11,7 @@ class SmallTimer:
     """
     A semi-accurate timer with start and stop capabilities.
 
-    :arg name: an optional label for identifying
+    :arg name: an optional label for identifying your timer.
     """
     def __init__(self, name: Optional[str] = None):
         self.name = name if name else shortuuid.uuid()[:8]
@@ -53,7 +53,7 @@ def timed(name: Optional[str] = None) -> Callable:
     """
     A decorator for timing functions.
 
-    :param name: an optional label for the timer
+    :param name: an optional label for identifying your timer.
     """
     def decorator_timed(func: Callable):
         @functools.wraps(func)

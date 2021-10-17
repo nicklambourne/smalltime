@@ -1,7 +1,7 @@
 # smalltime
 
 <p align="center">
-    <img src="https://github.com/nicklambourne/smalltime/raw/master/docs/img/smalltime.png" width="250px"/>
+    <img src="https://github.com/nicklambourne/smalltime/raw/master/docs/source/_static/img/smalltime.png" width="250px"/>
 </p>
 
 ---
