@@ -14,14 +14,20 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-python@v1
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Setup
+      uses: actions/setup-python@v1
       with:
         python-version: 3.9
-    - uses: Gr1N/setup-poetry@v4
-    - run: poetry install
-    - run: poetry run pytest
-    - uses: AndreMiras/coveralls-python-action@v20201129
+    - name: Install Poetry
+      uses: Gr1N/setup-poetry@v4
+    - name: Install smalltime & Dependcies
+      run: poetry install
+    - name: Run Tests
+      run: poetry run pytest
+    - name: Coverage
+      uses: coverallsapp/github-action@master
       with:
         parallel: true
         flag-name: Coveralls
