@@ -1,5 +1,12 @@
 # smalltime
 
+![GitHub](https://img.shields.io/github/license/nicklambourne/smalltime)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/smalltime)
+![PyPI](https://img.shields.io/pypi/v/smalltime)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/smalltime)
+[![Coverage Status](https://coveralls.io/repos/github/nicklambourne/slackblocks/badge.svg?branch=master)](https://coveralls.io/github/nicklambourne/smalltime?branch=master)
+<a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
+
 <p align="center">
     <img src="https://github.com/nicklambourne/smalltime/raw/master/docs/img/smalltime.png" width="250px"/>
 </p>

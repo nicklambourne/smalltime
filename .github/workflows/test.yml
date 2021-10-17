@@ -1,0 +1,28 @@
+name: Test
+
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v1
+      with:
+        python-version: 3.9
+    - uses: Gr1N/setup-poetry@v4
+    - run: poetry install
+    - run: poetry run pytest
+    - uses: AndreMiras/coveralls-python-action@develop
+      with:
+        parallel: true
+        flag-name: Coveralls
+        github-token: ${{ github.COVERALLS_REPO_TOKEN }}

@@ -9,15 +9,13 @@ import shortuuid
 
 
 class SmallTimer:
-    def __init__(self, name: Optional[str] = None, target: TextIO = sys.stdout):
+    def __init__(self, name: Optional[str] = None):
         self.name = name if name else shortuuid.uuid()[:8]
         self.stored_time = None
-        self.target = target
 
     def start(self) -> "SmallTimer":
         print(
             colors.color(f"Starting counter ({self.name})", fg="white", bg="red"),
-            file=self.target,
         )
         self.stored_time = time.perf_counter_ns()
         return self
@@ -32,18 +30,17 @@ class SmallTimer:
                 fg="white",
                 bg="red",
             ),
-            file=self.target,
         )
         self.stored_time = None
         return time_delta_ns
 
 
-def timed(name: Optional[str] = None, target: Optional[str] = None):
+def timed(name: Optional[str] = None):
     def decorator_timed(func: Callable):
         @functools.wraps(func)
         def wrapper_timed(*args, **kwargs):
             timer = SmallTimer(
-                name=name or func.__name__, target=target if target else sys.stdout
+                name=name or func.__name__,
             )
             timer.start()
             func(*args, **kwargs)
