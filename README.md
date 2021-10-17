@@ -50,7 +50,7 @@ thing_you_want_to_time()
 ```
 
 ### From the Command Line
-* Assumes installation via Poetry and an active [Poetry shell](https://python-poetry.org/docs/cli/#shell).
+N.B.: Assumes installation via Poetry and an active [Poetry shell](https://python-poetry.org/docs/cli/#shell).
 ```bash
 # Usage: st <program> [args]
 st sleep 10
