@@ -7,7 +7,7 @@
 ---
 
 ![GitHub](https://img.shields.io/github/license/nicklambourne/smalltime)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/smalltime)
+![![PyPI - Python Version](https://img.shields.io/pypi/pyversions/smalltime)]()
 ![PyPI](https://img.shields.io/pypi/v/smalltime)
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/smalltime)
 [![codecov](https://codecov.io/gh/nicklambourne/smalltime/branch/master/graph/badge.svg?token=QBZ9WK9PFA)](https://codecov.io/gh/nicklambourne/smalltime)
