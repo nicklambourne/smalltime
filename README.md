@@ -1,15 +1,17 @@
 # smalltime
 
+<p align="center">
+    <img src="https://github.com/nicklambourne/smalltime/raw/master/docs/img/smalltime.png" width="250px"/>
+</p>
+
+<hr>
+
 ![GitHub](https://img.shields.io/github/license/nicklambourne/smalltime)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/smalltime)
 ![PyPI](https://img.shields.io/pypi/v/smalltime)
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/smalltime)
 [![codecov](https://codecov.io/gh/nicklambourne/smalltime/branch/master/graph/badge.svg?token=QBZ9WK9PFA)](https://codecov.io/gh/nicklambourne/smalltime)
 <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
-
-<p align="center">
-    <img src="https://github.com/nicklambourne/smalltime/raw/master/docs/img/smalltime.png" width="250px"/>
-</p>
 
 ## What is it?
 `smalltime` is a quick and dirty library for timing Python function, sections of code and arbitrary programs on the command line.
