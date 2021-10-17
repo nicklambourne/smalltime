@@ -27,9 +27,6 @@ jobs:
     - name: Run Tests
       run: poetry run pytest
     - name: Run Coverage
-      run: mkdir -p ./coverage/ poetry run coverage run --source=smalltime -m pytest tests/ > ./coverage/lcov.info
-    - name: Publish Coverage
-      uses: coverallsapp/github-action@master
-      with:
-        flag-name: Coveralls
-        github-token: ${{ secrets.COVERALLS_REPO_TOKEN }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+      run: coveralls --service=github
