@@ -24,6 +24,8 @@ jobs:
       uses: Gr1N/setup-poetry@v4
     - name: Install smalltime & Dependcies
       run: poetry install
+    - name: Type Checking
+      run: poetry run mypy smalltime
     - name: Run Tests
       run: poetry run pytest --cov=./ --cov-report=xml
     - name: Upload Coverage Report
