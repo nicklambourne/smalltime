@@ -21,7 +21,7 @@ jobs:
     - uses: Gr1N/setup-poetry@v4
     - run: poetry install
     - run: poetry run pytest
-    - uses: AndreMiras/coveralls-python-action@develop
+    - uses: AndreMiras/coveralls-python-action@v20201129
       with:
         parallel: true
         flag-name: Coveralls
