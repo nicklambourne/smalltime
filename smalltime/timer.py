@@ -51,7 +51,7 @@ class SmallTimer:
 
 def timed(name: Optional[str] = None) -> Callable:
     """
-    A decorator for timing functions.
+    A convenience decorator for timing whole functions.
 
     :param name: an optional label for identifying your timer.
     """
