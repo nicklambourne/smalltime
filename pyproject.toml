@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "smalltime"
-version = "0.0.2"
+version = "0.0.3"
 description = "A small python timing package for a packaging demonstration"
 authors = ["nicklambourne <dev@ndl.im>"]
 license = "BSD 3-Clause"
