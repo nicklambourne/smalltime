@@ -4,6 +4,7 @@ version = "0.0.2"
 description = "A small python timing package for a packaging demonstration"
 authors = ["nicklambourne <dev@ndl.im>"]
 license = "BSD 3-Clause"
+readme = "README.md"
 classifiers = [
     "Development Status :: 3 - Alpha",
     "License :: OSI Approved :: BSD License",
