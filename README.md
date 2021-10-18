@@ -10,6 +10,7 @@
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/smalltime)]()
 ![PyPI](https://img.shields.io/pypi/v/smalltime)
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/smalltime)
+[![Test](https://github.com/nicklambourne/smalltime/actions/workflows/test.yml/badge.svg)](https://github.com/nicklambourne/smalltime/actions/workflows/test.yml)
 [![codecov](https://codecov.io/gh/nicklambourne/smalltime/branch/master/graph/badge.svg?token=QBZ9WK9PFA)](https://codecov.io/gh/nicklambourne/smalltime)
 [![Read the Docs](https://img.shields.io/readthedocs/smalltime)](https://smalltime.readthedocs.io/en/latest/)
 <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
