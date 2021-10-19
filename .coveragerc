@@ -1,8 +1,0 @@
-[run]
-omit =
-    */test/*
-    */venv/*
-    */virtualenv/*
-source =
-    ./smalltime
-relative_files=True
