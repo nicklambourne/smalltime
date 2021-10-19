@@ -27,9 +27,4 @@ jobs:
     - name: Type Checking
       run: poetry run mypy smalltime --ignore-missing-imports
     - name: Run Tests
-      run: poetry run pytest --cov=./ --cov-report=xml
-    - name: Upload Coverage Report
-      uses: codecov/codecov-action@v2
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
-        fail_ci_if_error: true
+      run: poetry run pytest
